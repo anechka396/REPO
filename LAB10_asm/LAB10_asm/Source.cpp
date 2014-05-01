@@ -36,14 +36,19 @@ int main()
 
 		// i!
 		fmul st(0), st(6)
-		fmul st(4), st(0) 
-		fdiv st(0), st(0) 
+		fmul st(4), st(0)
+		//fdiv st(0), st(0) 
 		
 		// (2*i)!
 		fmul two
 		fmul st(3), st(0)
 		fsub one
 		fmul st(3), st(0)
+		fdiv st(0), st(0)
+
+		fmul st(0), st(6)
+		fadd one
+		fxch st(6)
 		fdiv st(0), st(0)
 		
 		// 2^(2*i)
