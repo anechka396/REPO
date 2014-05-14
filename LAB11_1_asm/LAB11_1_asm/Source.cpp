@@ -1,5 +1,5 @@
-//Iakubenko Anna Va
-//15) В заданной строке заменить каждое слово на обратное. Слова разделяются одним или более пробелами. (например, "abc qwerty" -> "cba ytrewq") 
+//Iakubenko Anna variant 15
+
 #include <iostream>
 
 using namespace std;
