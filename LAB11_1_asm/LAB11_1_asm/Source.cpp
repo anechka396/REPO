@@ -13,14 +13,21 @@ void main()
 	newStr = new char[MAX];
 	cout << "Enter the str: ";
 	cin.get(str, MAX);
-	int len = strlen(str);
+	//int len = strlen(str);
 	_asm
 	{
-		xor ebx, ebx // kol-vo bukv
-		xor ecx, ecx // dlina slova
-		mov esi, str
+		cld
+		mov edi, str
+		mov esi, edi
+		mov ecx, 0ffffffffh
+		xor al, al
+		repne scasb
+		sub edi, esi
+		dec edi
+		mov ecx, edi
+
+		xor ebx, ebx 
 		mov edi, newStr		
-		mov ecx, len
 
 		cmp ecx, 0
 		je END
