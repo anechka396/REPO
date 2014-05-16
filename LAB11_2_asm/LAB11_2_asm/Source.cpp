@@ -23,14 +23,14 @@ void main()
 	{
 		mov esi, arr
 		mov edi, esi
-		mov ecx, n 
+		mov ecx, n
 		mov ebx, 0
 	START:
 		mov eax, ecx
 		add eax, ebx
 		xor edx, edx
 		div two
-		push eax 
+		push eax
 		mul four
 		mov edi, esi
 		add edi, eax
@@ -43,7 +43,7 @@ void main()
 		cmp edx, value
 		je EQUAL
 	LESS :
-		mov edi, ecx
+	    mov edi, ecx
 		sub edi, ebx
 		cmp edi, 1
 		je FAILEND
@@ -60,7 +60,7 @@ void main()
 		jg FAILEND
 		mov ecx, eax
 		jmp START
-	FAILEND:
+	FAILEND :
 		cmp edx, value
 		jg END
 		inc eax
@@ -70,10 +70,10 @@ void main()
 		mov edx, [edi]
 		cmp edx, value
 		jne END
-		dec eax
-		jmp EQUAL
-	END:
-	    mov index, eax
+		mov ecx, eax
+		jmp START
+	END :
+		mov index, eax
 	}
 	cout <<"Index: " << index << endl;
 	delete[]arr;
